@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <title>Shafal Adhikari</title>
+  </head>
+    <main>
+      <div class="jstshadow"></div>
+      <nav class="nClicked">
+        <div class="heading">
+          <svg class="menu">
+            <use xlink:href="sprite.svg#icon-menu"></use>
+          </svg>
+          <svg class="cancel">
+            <use xlink:href="sprite.svg#icon-cross"></use>
+          </svg>
+          <img src="images/safaldai.png" alt="Image" />
+          <span class="heading__mini">I 'M</span>
+          <span class="heading__main">Shafal Adhikari</span>
+        </div>
+        </div>
+        <ul>
+          <li class="active">Home</li>
+          <li>About Me</li>
+          <li>What I do</li>
+          <li>Skills</li>
+          <li>Projects</li>
+          <li>Contact</li>
+        </ul>
+        <div class="social">
+          <svg><use xlink:href="sprite.svg#icon-github"></use></svg>
+          <svg><use xlink:href="sprite.svg#icon-facebook"></use></svg>
+          <svg>
+            <use xlink:href="sprite.svg#icon-linkedin-with-circle"></use>
+          </svg>
+          <svg>
+            <use xlink:href="sprite.svg#icon-twitter-with-circle"></use>
+          </svg>
+        </div>
+      </nav>
+      <div class="Content">
+        <div class="Content__top">
+          <h3>Welcome</h3>
+          <h1>I am a Web Developer.</h1>
+            <button class="HireMe">Hire Me</button>
+        </div>
+        <div class="Content__aboutme">
+          <p class="Content__aboutme__heading">Know About Me</p>
+          <div  class="aboutme">
+            <div class="aboutmedesc">
+              <h3>I am <span>Shafal Adhikari</span>, a web developer</h3>
+              <p>I am a young guy who is fully drown into the world of technology and creativity. I have been doing web development both frontend and backend for 2+ years. Being a +2 student I don't believe that you should compulsorily need to get a degree to obtain skills. I mostly believe in interest and passion. I am mainly into Javascript. But I am very interested in electronics and robotics stuffs too. I have done award winning project in Young Scientist Summit-2019 in field of Robotics and Engineering. In near future, I want to get into the field of data science, machine learning and combine my overall skills with robotics and electronics to create great products.</p>
+            </div>
+            <ul class="aboutul">
+              <li><span class="aboutulmain">Name</span>: Shafal Adhikari</li>
+              <li><span class="aboutulmain">Age:</span> 17</li>
+              <li><span class="aboutulmain">Email:</span> adhikarysafal0@gmail.com</li>
+              <li><span class="aboutulmain">From:</span> Kathmandu Nepal</li>
+              <li><Button class="dCvbtn">Download CV</Button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="Content__aboutme second">
+          <p class="Content__aboutme__heading">What I Do?</p>
+          <div class="whatidoflex">
+            <div class="whatido">
+              <div>
+                <h1>Web  Designing</h1>
+                <p>Lorem ipsum dolor sit amet Esse nesciunt cupiditate modi quidem cumque porro exercitationem sit dolorum, eaque voluptas id fuga molestiae quibusdam itaque amet! Cumque.</p>
+              </div>
+              <div>
+                <h1>Web  Designing</h1>
+                <p>Lorem ipsum dolor sit amet sciunt cupiditate modi quidem cumque porro exercitationem sit dolorum, eaque voluptas id fuga molestiae quibusdam itaque amet! Cumque.</p>
+              </div>
+              <div>
+                <h1>Web  Designing</h1> 
+                <p>nesciunt cupiditate modi quidem cumque porro exercitationem sit dolorum, eaque voluptas id fuga molestiae quibusdam itaque amet! Cumque.</p>
+              </div>
+            </div>
+            <div class="whatido">
+              <div>
+                <h1>Web  Designing</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipis. Esse nesciunt cupiditate modi quidem cumque porro exercitationem sit dolorum, eaque voluptas id fuga molestiae quibusdam itaque amet! Cumque.</p>
+              </div>
+              <div>
+                <h1>Web  Designing</h1>
+                <p>Lorem ipsum dolor sit ameam vel. Esse nesciunt cupiditate modi quidem cumque porro exercitationem sit dolorum, eaque voluptas id fuga molestiae quibusdam itaque amet! Cumque.</p>
+              </div>
+              <div>
+                <h1>Web  Designing</h1>
+                <p>Lorem ipsum dolor sit amet unt cupiditate modi quidem cumque porro exercitationem sit dolorum, eaque voluptas id fuga molestiae quibusdam itaque amet! Cumque.</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </main>
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.menu').click(function(){
+        $('nav').removeClass('nClicked')
+        $('.cancel').css('display', 'block')
+        $(this).css('display', 'none')
+      })
+      $('.cancel').click(function(){
+        $('nav').addClass('nClicked')
+        $(this).css('display', 'none')
+        $('.menu').css('display', 'block')
+      })
+
+    })
+  </script>
+  </body>
+</html>
