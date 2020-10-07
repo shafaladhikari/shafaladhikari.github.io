@@ -179,20 +179,8 @@ nav .social svg:hover {
   background: white;
 }
 
-.Content .second {
+.Content__whatido {
   background: #f8f9fa;
-}
-
-.Content .second .whatidoflex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.Content .second .whatido {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,15 +188,41 @@ nav .social svg:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Content__whatido__heading {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-weight: 500;
+  font-size: 2.4rem;
+  border-bottom: 0.2rem solid #20c997;
+  padding: 1rem;
+}
+
+.Content__whatido .whatido {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 3rem;
 }
 
-.Content .second .whatido div {
-  width: 35rem;
+.Content__whatido .whatido div {
+  width: 30rem;
   margin: 2rem;
 }
 
-.Content .second .whatido div p {
+.Content__whatido .whatido div p {
   font-size: 1.6rem;
   text-align: justify;
 }
@@ -216,7 +230,7 @@ nav .social svg:hover {
 .Content__aboutme {
   width: 100%;
   padding: 3rem;
-  height: 50rem;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,12 +260,16 @@ nav .social svg:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 3rem;
 }
 
 .Content__aboutme .aboutme .aboutul {
-  width: 40%;
+  width: 40rem;
   list-style: none;
+  border-bottom: 1px solid #20c997;
+  padding-bottom: 5rem;
 }
 
 .Content__aboutme .aboutme .aboutul li {
@@ -279,7 +297,9 @@ nav .social svg:hover {
 }
 
 .Content__aboutme .aboutme .aboutmedesc {
-  width: 50%;
+  width: 50rem;
+  border-bottom: 1px solid #20c997;
+  padding-bottom: 5rem;
 }
 
 .Content__aboutme .aboutme h3 {
@@ -311,19 +331,20 @@ nav .social svg:hover {
 
 .Content__top h3 {
   position: absolute;
-  top: 35%;
+  top: 38%;
   left: 45%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: 0.2px;
 }
 
 .Content__top h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   position: absolute;
-  top: 50%;
+  top: 48%;
+  text-align: center;
   left: 45%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -336,7 +357,7 @@ nav .social svg:hover {
   height: 5rem;
   font-weight: 500;
   position: absolute;
-  top: 65%;
+  top: 60%;
   left: 45%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -379,7 +400,7 @@ nav .social svg:hover {
   background: #20c997;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
   main {
     -ms-grid-columns: min-content 1fr;
         grid-template-columns: -webkit-min-content 1fr;
@@ -514,13 +535,21 @@ nav .social svg:hover {
   nav.nClicked .social svg {
     width: 1.4rem;
   }
-  .content {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 2;
-    grid-area: 1/2/1/4;
-    -webkit-transition: 1s;
-    transition: 1s;
+  .Content__top h3 {
+    font-size: 1.6rem;
+  }
+  .Content__top h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Content__top h3 {
+    font-size: 1.4rem;
+  }
+  .Content__top h1 {
+    font-size: 1.8rem;
+    width: 70%;
   }
 }
 /*# sourceMappingURL=index.css.map */

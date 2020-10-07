@@ -123,18 +123,27 @@ nav {
   }
 }
 .Content {
-  .second {
+  &__whatido {
     background: $contentback;
-    .whatidoflex {
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__heading {
+      width: fit-content;
+      align-self: center;
+      font-weight: 500;
+      font-size: 2.4rem;
+      border-bottom: 0.2rem solid $colorsecondary;
+      padding: 1rem;
     }
     .whatido {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-around;
       padding: 3rem;
+
       div {
-        width: 35rem;
+        width: 30rem;
         margin: 2rem;
         p {
           font-size: 1.6rem;
@@ -150,7 +159,7 @@ nav {
   &__aboutme {
     width: 100%;
     padding: 3rem;
-    height: 50rem;
+    height: auto;
     display: flex;
     flex-direction: column;
     &__heading {
@@ -164,10 +173,13 @@ nav {
     .aboutme {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       padding: 3rem;
       .aboutul {
-        width: 40%;
+        width: 40rem;
         list-style: none;
+        border-bottom: 1px solid $colorsecondary;
+        padding-bottom: 5rem;
         li {
           font-size: 1.6rem;
           padding: 1rem;
@@ -190,7 +202,9 @@ nav {
         }
       }
       .aboutmedesc {
-        width: 50%;
+        width: 50rem;
+        border-bottom: 1px solid $colorsecondary;
+        padding-bottom: 5rem;
       }
       h3 {
         font-size: 2.4rem;
@@ -218,17 +232,18 @@ nav {
     color: white;
     h3 {
       position: absolute;
-      top: 35%;
+      top: 38%;
       left: 45%;
       transform: translate(-50%, -50%);
-      font-size: 2.8rem;
+      font-size: 2.4rem;
       font-weight: 500;
       letter-spacing: 0.2px;
     }
     h1 {
-      font-size: 5rem;
+      font-size: 4rem;
       position: absolute;
-      top: 50%;
+      top: 48%;
+      text-align: center;
       left: 45%;
       transform: translate(-50%, -50%);
       font-weight: 600;
@@ -239,7 +254,7 @@ nav {
       height: 5rem;
       font-weight: 500;
       position: absolute;
-      top: 65%;
+      top: 60%;
       left: 45%;
       transform: translate(-50%, -50%);
       border: 0.2rem solid $colorsecondary;
@@ -271,7 +286,7 @@ nav {
   background: $colorsecondary;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
   main {
     grid-template-columns: min-content 1fr;
     grid-template-rows: 1fr;
@@ -378,10 +393,27 @@ nav {
       }
     }
   }
-  .content {
-    // grid-row: 1/1;
-    // grid-column: 2/4;
-    grid-area: 1/2/1/4;
-    transition: 1s;
+  .Content {
+    &__top {
+      h3 {
+        font-size: 1.6rem;
+      }
+      h1 {
+        font-size: 2.4rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .Content {
+    &__top {
+      h3 {
+        font-size: 1.4rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+        width: 70%;
+      }
+    }
   }
 }
