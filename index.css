@@ -3,8 +3,8 @@
 *::after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   outline: none;
 }
 
@@ -25,10 +25,10 @@ main {
   background: #aab1b8;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr minmax(30rem, 4.5fr);
-      grid-template-columns: 1fr minmax(30rem, 4.5fr);
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+  height: 100vh;
+  overflow: hidden;
 }
 
 nav {
@@ -169,6 +169,12 @@ nav .social svg:hover {
 }
 
 .Content {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
@@ -402,22 +408,16 @@ nav .social svg:hover {
 
 @media only screen and (max-width: 700px) {
   main {
-    -ms-grid-columns: min-content 1fr;
-        grid-template-columns: -webkit-min-content 1fr;
-        grid-template-columns: min-content 1fr;
+    -ms-grid-columns: min-content 90vw;
+        grid-template-columns: -webkit-min-content 90vw;
+        grid-template-columns: min-content 90vw;
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
     -webkit-transition: 1s;
     transition: 1s;
   }
   nav {
-    width: 15rem;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1/2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
+    width: 10%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
